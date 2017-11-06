@@ -5,7 +5,7 @@ To integrate DAOX and start accepting BTC and other cryptocurrencies in your Eth
 1. Get list of supported tokens -- TODO impl method
 2. Implement [TokenReceiver](contracts/TokenReceiver.sol) interface in your smart contract.
 onTokenTransfer function will be called from Token smart contract when your contract received payment.
-    * msg.sender - token address. You MUST check this address before processing payment. This address should match with BTC token address (or other cryptocurrency token)
+    * msg.sender - token address. You **MUST** check this address before processing payment. This address should match with BTC token address (or other cryptocurrency token)
     * from - sender of BTC-backed (or other cryptocurrency) token. If new tokens are mint this address is 0x0
     * value - number of tokens sent
     * data - arbitrary byte array describing transaction (for example it can be address of the future token owner)
